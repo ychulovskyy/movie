@@ -25,8 +25,10 @@
     <module name="SuppressionFilter">
         <property name="file" value="./config/checkstyle-suppressions.xml"/>
     </module>
+    <module name="SuppressWarningsFilter" />
 
     <module name="TreeWalker">
+        <module name="SuppressWarningsHolder"/>
 
         <!-- Checks for Naming Conventions.                  -->
         <!-- See http://checkstyle.sf.net/config_naming.html -->

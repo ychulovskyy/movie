@@ -1,9 +1,7 @@
 package com.movie.demo.service;
 
 import com.movie.demo.MovieApplication;
-import com.movie.demo.exceptions.ResourceNotFoundException;
 import com.movie.demo.model.MovieComment;
-import com.movie.demo.model.MovieDetails;
 import com.movie.demo.repository.MovieCommentsRepository;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -14,7 +12,6 @@ import org.springframework.cache.CacheManager;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import java.util.Arrays;
-import java.util.List;
 import java.util.concurrent.ExecutionException;
 
 import static com.movie.demo.config.CacheConfig.MOVIE_COMMENTS_CACHE;
@@ -24,8 +21,8 @@ import static org.mockito.Mockito.when;
 @RunWith(SpringRunner.class)
 @SpringBootTest(classes = MovieApplication.class)
 public class MovieCommentsServiceTest {
-    private final static MovieComment MOVIE_COMMENT = new MovieComment("1", "username", "message");
-    private final static MovieComment MOVIE_COMMENT2 = new MovieComment("2", "username", "message");
+    private static final MovieComment MOVIE_COMMENT = new MovieComment("1", "username", "message");
+    private static final MovieComment MOVIE_COMMENT2 = new MovieComment("2", "username", "message");
 
     @Autowired
     private MovieCommentsService movieCommentsService;

@@ -19,6 +19,7 @@ public class MovieDetailsRepositoryStub implements MovieDetailsRepository {
     }
 
     @Override
+    @SuppressWarnings({"MagicNumber"})
     public MovieDetails getMovieDetails(String id) {
         // Artificial delay of 1s for demonstration purposes
         // First request to MovieDetailsService.getMovieDetails for specific id will be slow,

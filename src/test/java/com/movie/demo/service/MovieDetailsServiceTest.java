@@ -19,7 +19,7 @@ import static org.mockito.Mockito.when;
 @RunWith(SpringRunner.class)
 @SpringBootTest(classes = MovieApplication.class)
 public class MovieDetailsServiceTest {
-    private final static MovieDetails MOVIE_DETAILS = new MovieDetails("1", "title", "description");
+    private static final MovieDetails MOVIE_DETAILS = new MovieDetails("1", "title", "description");
 
     @Autowired
     private MovieDetailsService movieDetailsService;
